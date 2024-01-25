@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Additional styles specific to the profile picture page */
+        body {
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #33425b;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 170px;
+            height: 90px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-profile img {
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .profile-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.profile-image {
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+        .change-button {
+            background-color: #4961c1;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #33425b;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-row {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html"> <!-- Added anchor tag for logo linking -->
+            <div class="logo">
+                <img src="SELogo2.jpg" alt="Logo">
+            </div>
+        </a>
+        <div class="user-profile" id="userProfile">
+            <img src="profile.jpeg" alt="User Avatar" width="40" height="40" onclick="toggleUserMenu()">
+            <div class="user-menu" id="userMenu">
+                <ul>
+                    <li><a href="http://localhost/SE/main.php">Account Information</a></li>
+                    <li><a href="profile.html">Profile Picture</a></li>
+                    <li><a href="index.html">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <h2>Your Profile Picture</h2>
+        <img class="profile-image" src="profile.jpeg" alt="Current Profile Picture">
+        <button class="change-button" onclick="changeProfilePicture()">Change Profile Picture</button>
+    </div>
+
+    <footer>
+        <div class="footer-row">
+            <p>Copyright © 2024, Kevin Gisela Gea</p>
+        </div>
+        <div class="footer-row">
+            <p>University Of New York Tirana, Albania</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeProfilePicture() {
+           
+            alert('Change Profile Picture functionality will be implemented here.');
+        }
+
+        function toggleUserMenu() {
+            var userMenu = document.getElementById('userMenu');
+            userMenu.style.display = (userMenu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

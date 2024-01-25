@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="SELogo.png" alt="Logo">
+    </div>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="register.php" method="post"> <!-- Updated action attribute -->
+            <label for="reg_username">Username:</label>
+            <input type="text" id="reg_username" name="username" required><br>
+
+            <label for="reg_password">Password:</label>
+            <input type="password" id="reg_password" name="password" required><br>
+
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="index.html">Login here</a>.</p>
+    </div>
+</body>
+</html>

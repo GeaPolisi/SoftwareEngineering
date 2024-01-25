@@ -1,0 +1,25 @@
+<!-- header.html -->
+<header>
+    <a href="main.html">
+        <div class="logo">
+            <img src="SELogo2.jpg" alt="Logo">
+        </div>
+    </a>
+    <div class="user-profile" id="userProfile">
+        <img src="user-avatar.jpg" alt="User Avatar" width="40" height="40" onclick="toggleUserMenu()">
+        <div class="user-menu" id="userMenu">
+            <ul>
+                <li><a href="#">Account Information</a></li>
+                <li><a href="profile.html">Profile Picture</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<script>
+    function toggleUserMenu() {
+        var userMenu = document.getElementById('userMenu');
+        userMenu.style.display = (userMenu.style.display === 'block') ? 'none' : 'block';
+    }
+</script>

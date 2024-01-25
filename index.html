@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+   
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      
+</head>
+<body>
+    <div class="logo">
+        <img src="SELogo.png" alt="Logo">
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="login.php" method="post"> <!-- Updated action attribute -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <div class="g-recaptcha" data-sitekey="6LePJVwpAAAAAAGBO3ffIieBYyol8bqxr6Yx_3QR"></div>
+            
+
+
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="register.html">Register now</a>.</p>
+    </div>
+
+    <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LdTxFspAAAAAJPU7URYFcfVBWhiroZFpSp3kp_d', {action: 'LOGIN'});
+          });
+        }
+      </script>
+
+
+</body>
+</html>
